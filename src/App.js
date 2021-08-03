@@ -21,7 +21,7 @@ class App extends Component {
         <HashRouter basename="/SnapScout">
           <div className="container">
             <Route
-              render={props => (
+              render={(props) => (
                 <Header
                   handleSubmit={this.handleSubmit}
                   history={props.history}
@@ -44,7 +44,7 @@ class App extends Component {
               <Route path="/food" render={() => <Item searchTerm="food" />} />
               <Route
                 path="/search/:searchInput"
-                render={props => (
+                render={(props) => (
                   <Search searchTerm={props.match.params.searchInput} />
                 )}
               />
